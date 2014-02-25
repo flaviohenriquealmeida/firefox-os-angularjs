@@ -1,0 +1,16 @@
+{
+  "name": "firefox-os-angularjs",
+  "version": "0.0.0",
+  "homepage": "https://github.com/flaviohenriquealmeida/firefox-os-angularjs",
+  "authors": [
+    "flaviohenriquealmeida <flaviohenriquealmeida@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

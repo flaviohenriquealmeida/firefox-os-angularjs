@@ -1,0 +1,20 @@
+{
+  "version": "1.0",
+  "name": "Contatooh",
+  "description": "Cadastro de Contatos",
+  "type": "privileged",
+  "launch_path": "/index.html",
+  "developer": {
+    "name": "Flávio Almeida",
+    "url": "http://www.caelum.com.br"
+  },
+  "icons": {
+    "128": "/img/icon-128.png"
+  },
+  "permissions": {
+    "contacts": {
+      "description": "Required for autocompletion in the share screen",
+      "access": "readcreate"
+    }
+  }
+}

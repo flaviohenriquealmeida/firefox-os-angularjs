@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt" ng-app="contatooh">
+<head>
+	<meta charset="UTF-8">
+	<title>Contatooh</title>
+	
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css">
+
+</head>
+<body class="container">
+	<h1 class="text-center">Contatooh</h1>
+	<div class="table-responsive">
+		<table class="table table-hover" ng-controller="ContatosController">
+			<tr>
+				<th>Nome</th>
+				<th>Telefone</th>
+				<th>Ação</th>
+			</tr>
+			<tr ng-repeat="contato in contatos">
+				<td>{{contato.nome}}</td>
+				<td>{{contato.tel}}</td>
+				<td>
+					<button  ng-click="liga(contato)" class="btn btn btn-default">Ligar</button>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<a href="#" class="btn btn-primary">Novo Contato</button>
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/controllers/ContatosController.js"></script>
+</body>
+</html>
