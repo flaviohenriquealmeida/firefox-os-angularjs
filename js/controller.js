@@ -1,17 +1,17 @@
-app.controller('ContatosController', function ($scope) {
-
+function ContatosController($scope) {
+	
 	$scope.contatos = [];
-
 
 	var manager = window.navigator.mozContacts;
 	var req = manager.getAll({});
 
 	req.onsuccess = function() {
 		if(this.result) {
-			var mcNome = this.result.name.join(' ');
-			var mcTel = this.result.tel[0].value;
-			console.log(name);
-			$scope.contatos.push({nome: mcNome, tel: mcTel});
+			var contato = {
+				nome: this.result.name.join(' '), 
+				tel: this.result.tel[0].value
+			};
+			$scope.contatos.push(contato);
 			this.continue();
 		}
 		$scope.$apply();
@@ -29,4 +29,4 @@ app.controller('ContatosController', function ($scope) {
 			}
 		});
 	};
-});
+}
