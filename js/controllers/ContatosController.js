@@ -1,4 +1,4 @@
-function ContatosController($scope) {
+app.controller('ContatosController', function ($scope) {
 	
 	$scope.contatos = [];
 
@@ -6,6 +6,7 @@ function ContatosController($scope) {
 	var req = manager.getAll({});
 
 	req.onsuccess = function() {
+		console.log('teste');
 		if(this.result) {
 			var contato = {
 				nome: this.result.name.join(' '), 
@@ -29,4 +30,4 @@ function ContatosController($scope) {
 			}
 		});
 	};
-}
+});
